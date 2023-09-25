@@ -1,0 +1,114 @@
+{
+  "students": [
+    {
+      "userName": "s",
+      "email": "s@s",
+      "password": "s",
+      "id": 1
+    },
+    {
+      "userName": "momen",
+      "email": "m@gmail.com",
+      "password": "m",
+      "subjects": [
+        {
+          "name": "English",
+          "id": 2,
+          "degree": 2
+        },
+        {
+          "name": "الرياضيات",
+          "id": 3,
+          "degree": 0
+        }
+      ],
+      "id": 2
+    },
+    {
+      "userName": "walid",
+      "email": "walid@gmail.com",
+      "password": "w",
+      "id": 3
+    },
+    {
+      "userName": "ahmed",
+      "email": "ahmed@gmail.com",
+      "password": "a",
+      "subjects": [
+        {
+          "name": "English",
+          "id": 2,
+          "degree": 2
+        },
+        {
+          "name": "الرياضيات",
+          "id": 3,
+          "degree": 2
+        }
+      ],
+      "id": 4
+    }
+  ],
+  "doctor": [
+    {
+      "userName": "Mo'men",
+      "email": "m@momen.com",
+      "password": "mo",
+      "id": 1
+    }
+  ],
+  "subjects": [
+    {
+      "name": "English",
+      "question": [
+        {
+          "question": "How _____ you ",
+          "answer1": "are",
+          "answer2": "is",
+          "answer3": "it",
+          "answer4": "did",
+          "correctAnswer": "are"
+        },
+        {
+          "question": "I am _____ engineer",
+          "answer1": "a",
+          "answer2": "as",
+          "answer3": "the",
+          "answer4": "an",
+          "correctAnswer": "an"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "name": "الرياضيات",
+      "question": [
+        {
+          "question": "2+2",
+          "answer1": "3",
+          "answer2": "4",
+          "answer3": "0",
+          "answer4": "2",
+          "correctAnswer": "4"
+        },
+        {
+          "question": "2-2",
+          "answer1": "3",
+          "answer2": "4",
+          "answer3": "0",
+          "answer4": "2",
+          "correctAnswer": "0"
+        }
+      ],
+      "id": 3
+    }
+  ],
+  "login": [
+    {
+      "username": "Mo'men",
+      "role": "doctor",
+      "userId": 1,
+      "id": 1
+    }
+  ]
+}

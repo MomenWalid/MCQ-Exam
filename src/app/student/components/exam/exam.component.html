@@ -1,0 +1,41 @@
+<div class="examBox">
+  <div class="examhead text-center">
+    <h2>اختبار {{subject?.name}}</h2>
+  </div>
+  <div class="quizBox" *ngFor="let question of subject?.question; let index = index">
+    <strong><span class="text-danger">سؤال.{{index +1}} </span> {{question.question}} </strong>
+    <div class="row mt-3" dir="rtl">
+      <div class="col-md-6 col-sm-12 mt-3">
+        <mat-radio-button *ngIf="user?.role == 'students' && !showResult && validExam" name="{{index}}"
+          value="{{question.answer1}}" (change)="checkValue($event)"></mat-radio-button>
+        <label>A. {{question.answer1}}</label>
+      </div>
+      <div class="col-md-6 col-sm-12 mt-3">
+        <mat-radio-button *ngIf="user?.role == 'students' && !showResult && validExam" name="{{index}}"
+          value="{{question.answer2}}" (change)="checkValue($event)">
+        </mat-radio-button>
+        <label>B. {{question.answer2}}</label>
+      </div>
+      <div class="col-md-6 col-sm-12 mt-3">
+        <mat-radio-button *ngIf="user?.role == 'students' && !showResult && validExam" name="{{index}}"
+          value="{{question.answer3}}" (change)="checkValue($event)">
+        </mat-radio-button>
+        <label>C. {{question.answer3}}</label>
+      </div>
+      <div class="col-md-6 col-sm-12 mt-3">
+        <mat-radio-button *ngIf="user?.role == 'students' && !showResult && validExam" name="{{index}}"
+          value="{{question.answer4}}" (change)="checkValue($event)">
+        </mat-radio-button>
+        <label>D. {{question.answer4}}</label>
+      </div>
+    </div>
+    <div class="" *ngIf="user?.role == 'doctor'">
+      <button mat-raised-button class="btn btn-danger mt-4" (click)="deleteQuestion(index)">حذف</button>
+    </div>
+    <hr />
+  </div>
+  <div class="text-center" *ngIf="user?.role == 'students'">
+    <span *ngIf="showResult || !validExam" class="fs-5 text-success"> {{subject.question.length}} / {{total}} </span>
+    <button *ngIf="!showResult && validExam" class="btn btn-success px-5 fs-5" (click)="Result()">النتيجة</button>
+  </div>
+</div>
